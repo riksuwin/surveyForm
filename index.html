@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">By filling out this form, you will help us improve the platform!</p>
+    <form id="survey-form">
+      <label for="name-label">Name<input id="name" type="text" placeholder="Enter your name" required /></label>
+      <label for="email-label">Email<input id="email" type="email" placeholder="Enter your email"  required /></label>
+      <label for="number-label">Age<input id="number" type="number" min=13 max=99 placeholder="Enter a number"/></label>
+      <label for=dropdown>Are you enrolled?
+        <select id="dropdown" name="dropdown">
+          <option value="">(select one)</option>
+          <option value="1">Yes</option>
+          <option value="2">No</option>
+      </label>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
