@@ -1,25 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <title>Survey Form</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <h1 id="title">Survey Form</h1>
     <p id="description">By filling out this form, you will help us improve the platform!</p>
+
     <form id="survey-form">
-      <label for="name-label">Name<input id="name" type="text" placeholder="Enter your name" required /></label>
-      <label for="email-label">Email<input id="email" type="email" placeholder="Enter your email"  required /></label>
-      <label for="number-label">Age<input id="number" type="number" min=13 max=99 placeholder="Enter a number"/></label>
-      <label for=dropdown>Are you enrolled?
-        <select id="dropdown" name="dropdown">
-          <option value="">(select one)</option>
-          <option value="1">Yes</option>
-          <option value="2">No</option>
-      </label>
+      <fieldset>
+        <label id="name-label">
+          Name 
+          <input id="name" type="text" placeholder="Enter your name" required />
+        </label>
+        <label id="email-label">
+          Email 
+          <input id="email" type="email" placeholder="Enter your email"  required />
+        </label>
+        <label id="number-label">
+          Age 
+          <input id="number" type="number" min=13 max=99 placeholder="Enter a number" required/>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <h2>What year are you in?</h2>
+        <label>
+          <select id="dropdown" name="dropdown" required>
+            <option value="">(select one)</option>
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <h2>Are you currently enrolled this upcoming 2025 – 2026 A.Y.?</h2>
+        <label class="radio-label">
+          <input type="radio" name="enrollment" value="yes" class="radio-input" checked/>
+          Yes
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="enrollment" value="no" class="radio-input" />
+          No
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <h2>What are you looking forward to?</h2>
+        <label class="checkbox-label">
+          <input name="looking-forward" type="checkbox" class="checkbox-input" value="new-friends" />
+          New group of friends
+        </label> <br />
+        <label class="checkbox-label">
+          <input name="looking-forward" type="checkbox" class="checkbox-input" value="orgs" />
+          Join organizations
+        </label> <br />
+        <label class="checkbox-label">
+          <input name="looking-forward" type="checkbox" class="checkbox-input" value="events" />
+          Events
+        </label> <br />
+        <label class="checkbox-label">
+          <input name="looking-forward" type="checkbox" class="checkbox-input" value="discovery" />
+          Discovering of thyself
+        </label> <br />
+        <label class="checkbox-label">
+          <input name="looking-forward" type="checkbox" class="checkbox-input" value="career" />
+          To improve career
+        </label> <br />
+      </fieldset>
+      <fieldset>
+        <label>Other thoughts you want to convey:
+          <textarea id="comment" name="comment" rows="8" cols="30" placeholder="I want to sleep in library..."></textarea>
+        </label>
+      </fieldset>
       
-      <input type="submit" value="Submit">
+      <input id="submit" type="submit" />
     </form>
   </body>
 </html>
